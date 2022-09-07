@@ -1,7 +1,8 @@
-open Util ;;
-open CrawlerServices ;;
-open Pagerank ;;
-open Crawl ;;
+open A5lib
+open Util
+open CrawlerServices
+open Pagerank
+open Crawl
 
 (* Set to true to enable various debugging printouts *)
 let debug = true

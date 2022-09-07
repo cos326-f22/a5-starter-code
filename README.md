@@ -135,8 +135,10 @@ Compile Moogle via command line by typing `make all`. To start Moogle up from a
 terminal or shell, type:
 
 ```
-./moogle.d.byte 8080 42 data/simple-html/index.html
+dune exec moogle 8080 42 data/simple-html/index.html
 ```
+
+_(Optional note: You can write `dune exec --no-build moogle ...` if you want to skip the step of checking whether the ML files need to be recompiled and relinked.  And you can even just write `_build/install/default/bin/moogle` to directly run the executable.  You can browse the `_build` directory tree to see what Dune put in there, and compare to `lib/dune` and `main/dune` to see how the build is specified.)_
 
 The first command line argument (`8080`) represents the *port* that your Moogle
 server listens to. Unless you know what you are doing, you should generally
